@@ -27,7 +27,6 @@ module Secret
     def is_additive?(pairs)
       pairs.each do |pair|
         if secret(pair[0] + pair[1]) != secret(pair[0]) + secret(pair[1])
-          puts "x: #{pair[0]} y: #{pair[1]}"
           return false
         end
       end
